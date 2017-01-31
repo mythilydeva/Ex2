@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 	TextView text;
 	EditText ed;
+	Button zero;
 	Button one;
 	Button two;
 	Button three;
@@ -31,6 +32,24 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ed=(EditText) findViewById(R.id.edit1);
+        text=(TextView) findViewById(R.id.text1);
+        zero=(Button) findViewById(R.id.zero);
+        one=(Button) findViewById(R.id.one);
+        two=(Button) findViewById(R.id.two);
+        three=(Button) findViewById(R.id.thr);
+        four=(Button) findViewById(R.id.four);
+        six=(Button) findViewById(R.id.five);
+        seven=(Button) findViewById(R.id.six);
+        eight=(Button) findViewById(R.id.sev);
+        nine=(Button) findViewById(R.id.eig);
+        equal=(Button) findViewById(R.id.eq);
+        add=(Button) findViewById(R.id.plus);
+        sub=(Button) findViewById(R.id.minus);
+        mul=(Button) findViewById(R.id.mul);
+        div=(Button) findViewById(R.id.div);
+        del=(Button) findViewById(R.id.del);
+        												
     }
 
     @Override

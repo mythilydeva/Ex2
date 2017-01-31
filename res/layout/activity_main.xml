@@ -72,33 +72,6 @@
         android:text="1" />
 
     <Button
-        android:id="@+id/eq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/thr"
-        android:layout_below="@+id/thr"
-        android:layout_toLeftOf="@+id/plus"
-        android:text="=" />
-
-    <Button
-        android:id="@+id/plus"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/minus"
-        android:layout_below="@+id/one"
-        android:text="+" />
-
-    <Button
-        android:id="@+id/minus"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/eq"
-        android:layout_toRightOf="@+id/one"
-        android:text="-" />
-
-    <Button
         android:id="@+id/mul"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -162,5 +135,43 @@
         android:layout_marginBottom="14dp"
         android:layout_marginLeft="18dp"
         android:ems="10" />
+
+    <Button
+        android:id="@+id/zero"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/eq"
+        android:layout_alignBottom="@+id/eq"
+        android:layout_alignLeft="@+id/thr"
+        android:layout_toLeftOf="@+id/two"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/plus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/two"
+        android:layout_toRightOf="@+id/eq"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/minus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one"
+        android:layout_toRightOf="@+id/one"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/eq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/plus"
+        android:layout_toLeftOf="@+id/one"
+        android:layout_toRightOf="@+id/zero"
+        android:text="=" />
 
 </RelativeLayout>
