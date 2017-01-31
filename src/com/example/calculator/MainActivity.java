@@ -19,9 +19,9 @@ public class MainActivity extends ActionBarActivity {
 	Button three,four,five,six;
 	Button seven,eight,nine,equal;
 	Button add,sub,mul,div,del,dot;
-	float ValueOne , ValueTwo ;
-	 
+	float ValueOne , ValueTwo ;	 
     boolean mAdd , mSub ,mMul ,mDiv ;
+    String op="";
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +50,14 @@ public class MainActivity extends ActionBarActivity {
         zero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"0");
             }
         });
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
                 ed.setText(ed.getText()+"1");
             }
         });
@@ -63,6 +65,7 @@ public class MainActivity extends ActionBarActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"2");
             }
         });
@@ -70,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"3");
             }
         });
@@ -77,6 +81,7 @@ public class MainActivity extends ActionBarActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"4");
             }
         });
@@ -84,6 +89,7 @@ public class MainActivity extends ActionBarActivity {
        five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"5");
             }
         });
@@ -91,6 +97,7 @@ public class MainActivity extends ActionBarActivity {
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"6");
             }
         });
@@ -98,6 +105,7 @@ public class MainActivity extends ActionBarActivity {
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	 ed.setText(null);
             	ed.setText(ed.getText()+"7");
             }
         });
@@ -105,6 +113,7 @@ public class MainActivity extends ActionBarActivity {
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	ed.setText(null);
             	ed.setText(ed.getText()+"8");
             }
         });
@@ -112,18 +121,21 @@ public class MainActivity extends ActionBarActivity {
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+           	 ed.setText(null);
             	ed.setText(ed.getText()+"9");
             }
         });
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+ "+");
+            	op="+";
                 if (ed == null){
                     ed.setText("");
                 }else {
+                	 
                     ValueOne = Float.parseFloat(ed.getText() + "");
                     mAdd = true;
+                    ed.setText(op);
                     ed.setText(null);
                 }
             }
@@ -132,30 +144,33 @@ public class MainActivity extends ActionBarActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+ "-");
+            	op="-";
                 ValueOne = Float.parseFloat(ed.getText() + "");
                 mSub = true ;
-                ed.setText(null);
+                ed.setText(op);
+                
             }
         });
  
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+ "*");
+            	op="*";
                 ValueOne = Float.parseFloat(ed.getText() + "");
                 mMul = true ;
-                ed.setText(null);
+                ed.setText(op);
+               
             }
         });
  
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+ "/");
+            	op="/";
                 ValueOne = Float.parseFloat(ed.getText()+"");
                 mDiv = true ;
-                ed.setText(null);
+                ed.setText(op);
+               
             }
         });
  
