@@ -99,16 +99,6 @@
         android:layout_alignLeft="@+id/thr"
         android:text="9" />
 
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/del"
-        android:layout_alignLeft="@+id/ni"
-        android:layout_marginBottom="14dp"
-        android:layout_marginLeft="18dp"
-        android:ems="10" />
-
     <Button
         android:id="@+id/zero"
         style="?android:attr/buttonStyleSmall"

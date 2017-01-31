@@ -27,17 +27,18 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ed=(EditText) findViewById(R.id.edit1);
+        ed=(EditText) findViewById(R.id.editText1);
         text=(TextView) findViewById(R.id.text1);
         zero=(Button) findViewById(R.id.zero);
         one=(Button) findViewById(R.id.one);
         two=(Button) findViewById(R.id.two);
         three=(Button) findViewById(R.id.thr);
         four=(Button) findViewById(R.id.four);
-        six=(Button) findViewById(R.id.five);
-        seven=(Button) findViewById(R.id.six);
-        eight=(Button) findViewById(R.id.sev);
-        nine=(Button) findViewById(R.id.eig);
+        five=(Button) findViewById(R.id.five);
+        six=(Button) findViewById(R.id.six);
+        seven=(Button) findViewById(R.id.sev);
+        eight=(Button) findViewById(R.id.eig);
+        nine=(Button) findViewById(R.id.ni);
         equal=(Button) findViewById(R.id.eq);
         add=(Button) findViewById(R.id.plus);
         sub=(Button) findViewById(R.id.minus);
@@ -199,25 +200,7 @@ public class MainActivity extends ActionBarActivity {
         });
     }
  
-        												
+}   												
    
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-}
+    
