@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
 	Button two;
 	Button three,four,five,six;
 	Button seven,eight,nine,equal;
-	Button add,sub,mul,div,del;
+	Button add,sub,mul,div,del,dot;
 	float ValueOne , ValueTwo ;
 	 
     boolean mAdd , mSub ,mMul ,mDiv ;
@@ -44,6 +44,7 @@ public class MainActivity extends ActionBarActivity {
         mul=(Button) findViewById(R.id.mul);
         div=(Button) findViewById(R.id.div);
         del=(Button) findViewById(R.id.del);
+        dot=(Button) findViewById(R.id.dot);
         
         zero.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -190,12 +191,12 @@ public class MainActivity extends ActionBarActivity {
             }
         });
  
-        /*button10.setOnClickListener(new View.OnClickListener() {
+        dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ed.setText(ed.getText()+".");
             }
-        });*/
+        });
     }
  
         												
