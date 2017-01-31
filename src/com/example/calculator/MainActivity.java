@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,19 +16,13 @@ public class MainActivity extends ActionBarActivity {
 	Button zero;
 	Button one;
 	Button two;
-	Button three;
-	Button four;
-	Button five;
-	Button six;
-	Button seven;
-	Button eight;
-	Button nine;
-	Button equal;
-	Button add;
-	Button sub;
-	Button mul;
-	Button div;
-	Button del;
+	Button three,four,five,six;
+	Button seven,eight,nine,equal;
+	Button add,sub,mul,div,del;
+	float ValueOne , ValueTwo ;
+	 
+    boolean mAdd , mSub ,mMul ,mDiv ;
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +44,162 @@ public class MainActivity extends ActionBarActivity {
         mul=(Button) findViewById(R.id.mul);
         div=(Button) findViewById(R.id.div);
         del=(Button) findViewById(R.id.del);
-        												
+        
+        zero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"0");
+            }
+        });
+        one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed.setText(ed.getText()+"1");
+            }
+        });
+        	
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"2");
+            }
+        });
+        
+        three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"3");
+            }
+        });
+        
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"4");
+            }
+        });
+        
+       five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"5");
+            }
+        });
+       
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"6");
+            }
+        });
+        
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"7");
+            }
+        });
+        
+        eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"8");
+            }
+        });
+        
+        nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	ed.setText(ed.getText()+"9");
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+ 
+                if (ed == null){
+                    ed.setText("");
+                }else {
+                    ValueOne = Float.parseFloat(ed.getText() + "");
+                    mAdd = true;
+                    ed.setText(null);
+                }
+            }
+        });
+ 
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText() + "");
+                mSub = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText() + "");
+                mMul = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueOne = Float.parseFloat(ed.getText()+"");
+                mDiv = true ;
+                ed.setText(null);
+            }
+        });
+ 
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ValueTwo = Float.parseFloat(ed.getText() + "");
+ 
+                if (mAdd == true){
+ 
+                    ed.setText(ValueOne + ValueTwo +"");
+                    mAdd=false;
+                }
+ 
+ 
+                if (mSub == true){
+                    ed.setText(ValueOne - ValueTwo+"");
+                    mSub=false;
+                }
+ 
+                if (mMul == true){
+                    ed.setText(ValueOne * ValueTwo+"");
+                    mMul=false;
+                }
+ 
+                if (mDiv == true){
+                    ed.setText(ValueOne / ValueTwo+"");
+                    mDiv=false;
+                }
+            }
+        });
+ 
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed.setText("");
+            }
+        });
+ 
+        /*button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed.setText(ed.getText()+".");
+            }
+        });*/
     }
+ 
+        												
+   
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

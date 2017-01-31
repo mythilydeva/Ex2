@@ -72,24 +72,6 @@
         android:text="1" />
 
     <Button
-        android:id="@+id/mul"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/minus"
-        android:layout_alignLeft="@+id/minus"
-        android:text="*" />
-
-    <Button
-        android:id="@+id/div"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mul"
-        android:layout_alignLeft="@+id/mul"
-        android:text="/" />
-
-    <Button
         android:id="@+id/sev"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -117,15 +99,6 @@
         android:layout_alignLeft="@+id/thr"
         android:text="9" />
 
-    <Button
-        android:id="@+id/del"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/div"
-        android:layout_toRightOf="@+id/sev"
-        android:text="Del" />
-
     <EditText
         android:id="@+id/edit1"
         android:layout_width="wrap_content"
@@ -141,37 +114,83 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/eq"
-        android:layout_alignBottom="@+id/eq"
-        android:layout_alignLeft="@+id/thr"
+        android:layout_above="@+id/eq"
         android:layout_toLeftOf="@+id/two"
         android:text="0" />
 
     <Button
-        android:id="@+id/plus"
+        android:id="@+id/div"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/two"
-        android:layout_toRightOf="@+id/eq"
-        android:text="+" />
+        android:layout_alignBaseline="@+id/sev"
+        android:layout_alignBottom="@+id/sev"
+        android:layout_alignLeft="@+id/mul"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/mul"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/minus"
+        android:layout_below="@+id/div"
+        android:text="*" />
 
     <Button
         android:id="@+id/minus"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/six"
+        android:layout_toRightOf="@+id/six"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/plus"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/one"
         android:layout_toRightOf="@+id/one"
-        android:text="-" />
+        android:text="+" />
+
+    <Button
+        android:id="@+id/del"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one"
+        android:layout_toLeftOf="@+id/minus"
+        android:text="Del" />
+
+    <Button
+        android:id="@+id/dot"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zero"
+        android:layout_alignBottom="@+id/zero"
+        android:layout_alignRight="@+id/two"
+        android:layout_toRightOf="@+id/zero"
+        android:text="." />
 
     <Button
         android:id="@+id/eq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/plus"
-        android:layout_toLeftOf="@+id/one"
-        android:layout_toRightOf="@+id/zero"
+        android:layout_alignLeft="@+id/zero"
+        android:layout_alignRight="@+id/plus"
+        android:layout_below="@+id/plus"
         android:text="=" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sev"
+        android:layout_marginBottom="14dp"
+        android:layout_toRightOf="@+id/ni"
+        android:ems="10" />
 
 </RelativeLayout>
