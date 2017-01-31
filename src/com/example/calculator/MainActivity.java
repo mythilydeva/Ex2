@@ -118,7 +118,7 @@ public class MainActivity extends ActionBarActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+"+");
+            	ed.setText(ed.getText()+ "+");
                 if (ed == null){
                     ed.setText("");
                 }else {
@@ -132,7 +132,7 @@ public class MainActivity extends ActionBarActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+"-");
+            	ed.setText(ed.getText()+ "-");
                 ValueOne = Float.parseFloat(ed.getText() + "");
                 mSub = true ;
                 ed.setText(null);
@@ -142,7 +142,7 @@ public class MainActivity extends ActionBarActivity {
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+"*");
+            	ed.setText(ed.getText()+ "*");
                 ValueOne = Float.parseFloat(ed.getText() + "");
                 mMul = true ;
                 ed.setText(null);
@@ -152,7 +152,7 @@ public class MainActivity extends ActionBarActivity {
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	ed.setText(ed.getText()+"/");
+            	ed.setText(ed.getText()+ "/");
                 ValueOne = Float.parseFloat(ed.getText()+"");
                 mDiv = true ;
                 ed.setText(null);
